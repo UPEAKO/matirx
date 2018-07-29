@@ -2,11 +2,18 @@
 #include<iostream>
 
 int main() {
-    calculation calculation;
-    calculation.getDataFromFile("./matrix.txt");
-    calculation.get_matrix1()->print_matrix();
-    calculation.get_matrix2()->print_matrix();
-    cout<<"******************"<<endl;
-    calculation.multiplication();
-    return 0;
+	calculation calculation;
+	int sign = 1;
+	cout << "�����������1\n����ת������2" << endl;
+	cin >> sign;
+	if (sign == 1) {
+		calculation.getDataFromFile("./multiply.txt");
+		calculation.multiplication();
+	}
+	else {
+		calculation.getDataFromFile("./Transpose.txt");
+		calculation.transpose();
+	}
+	//system("pause");
+	return 0;
 }
